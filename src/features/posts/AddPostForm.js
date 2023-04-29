@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { postAdded } from "./postsSlice";
 
 const AddPostForm = () => {
-  const dispatch = useDispatch(); 
+  const dispatch = useDispatch();
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
@@ -11,7 +11,11 @@ const AddPostForm = () => {
   const onContentChanged = (e) => setContent(e.target.value);
 
   const onSavePostClicked = () => {
-    
+    if (title && content) {
+      dispatch(postAdded(title, content));
+      setTitle("");
+      setContent("");
+    }
   };
 
   return (
