@@ -6,7 +6,7 @@ const POSTS_URL = 'https://jsonplaceholder.typicode.com/posts';
 
 const initialState = {
   posts: [],
-  status: "idle", 
+  status: "idle", //'idle' | 'loading' | 'succeeded' | 'failed'
   error: null,
 };
 
