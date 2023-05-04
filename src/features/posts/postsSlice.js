@@ -32,8 +32,8 @@ const postsSlice = createSlice({
             date: new Date().toISOString(),
             userId,
             reactions: {
-              thumbsUp: 0,
-              wow: 0,
+              thumbsUp: 3,
+              wow: 1,
               heart: 0,
               rocket: 0,
               coffee: 0,
