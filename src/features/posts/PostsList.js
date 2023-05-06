@@ -6,7 +6,7 @@ import {
   getPostsError,
   fetchPosts,
 } from "./postsSlice";
-import PostsExcerpt from "./PostsExcerpt";
+import PostsExcerpt from "./PostExcerpt";
 
 const PostsList = () => {
   const dispatch = useDispatch();
