@@ -9,7 +9,7 @@ import { fetchPosts } from "./features/posts/postsSlice";
 import { fetchUsers } from "./features/users/userSlice";
 
 store.dispatch(fetchUsers());
-store.dispatch(fetchPosts)
+store.dispatch(fetchPosts())
 
 ReactDOM.render(
   <Provider store={store}>
