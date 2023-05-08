@@ -8,6 +8,18 @@ import { Link } from "react-router-dom";
 
 
 const SinglePostPage = () => {
+
+    const post = useSelector((state) => selectPostById(state, postId))
+
+    if (!post) {
+        return (
+            <section>
+                <h2>Post not found!</h2>
+            </section>
+        )
+    }
+
+
   return (
     <div>SinglePostPage</div>
   )
