@@ -7,10 +7,9 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 const SinglePostPage = () => {
+  const { postId } = useParams();
 
-
-    // Retrive postId
-  const post = useSelector((state) => selectPostById(state, postId));
+  const post = useSelector((state) => selectPostById(state, Number(postId)));
 
   if (!post) {
     return (
@@ -24,7 +23,7 @@ const SinglePostPage = () => {
     <article>
       <h2>{post.title}</h2>
       <p>{post.body}</p>
-      <p>
+      <p className="postCredit">
         <PostAuthor userId={post.userId} />
         <TimeAgo timestamp={post.date} />
       </p>
