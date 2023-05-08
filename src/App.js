@@ -2,8 +2,10 @@ import AddPostForm from "./features/posts/AddPostForm";
 import PostsList from "./features/posts/PostsList";
 import SinglePostPage from "./features/posts/SinglePostPage";
 import Layout from "./components/Layout";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import EditPostForm from "./features/posts/EditPost";
+import UsersList from "./features/users/UsersList";
+import UserPage from "./features/users/UserPage";
 
 function App() {
   return (
@@ -16,6 +18,14 @@ function App() {
           <Route path=":postId" element={<SinglePostPage />} />
           <Route path="edit/:postId" element={<EditPostForm />} />
         </Route>
+
+        <Route path="user">
+          <Route index element={<UsersList />} />
+          <Route path=":userId" element={<UserPage />} />
+        </Route>
+
+        {/* Catch all - replace with 404 component if you want */}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>
   );
