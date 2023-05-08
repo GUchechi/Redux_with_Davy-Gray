@@ -5,3 +5,12 @@ import TimeAgo from "./TimeAgo";
 import ReactionButtons from "./ReactionButtons";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+
+
+const SinglePostPage = () => {
+  return (
+    <div>SinglePostPage</div>
+  )
+}
+
+export default SinglePostPage
